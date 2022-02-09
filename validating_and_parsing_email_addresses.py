@@ -13,11 +13,11 @@ www.mischavandenburg.com
 
 import email.utils, re
 
-num = int(raw_input())
+num = int(input())
 regex = re.compile(r"(^[a-z])([a-zA-Z0-9\-\_\.]+)(@)([a-z]+)(\.)([a-z]{1,3}$)")
 
 for i in range(num):
-    a = email.utils.parseaddr(raw_input())
+    a = email.utils.parseaddr(input())
     if regex.search(a[1]):
         print(email.utils.formataddr(a))
     
